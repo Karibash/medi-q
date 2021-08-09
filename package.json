@@ -1,0 +1,46 @@
+{
+  "name": "typescript-library-template",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "keywords": [
+    "typescript"
+  ],
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "jsdelivr": "dist/bundle.min.js",
+  "unpkg": "dist/bundle.min.js",
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "tsc && tsc-alias",
+    "postbuild": "npm run rollup && npm run prepare-packages && npm run prepare-dist",
+    "rollup": "rollup -c tools/rollup.config.js",
+    "prepare-packages": "node tools/prepare-package.js",
+    "prepare-dist": "node tools/prepare-dist.js",
+    "prepare": "npm run build",
+    "clean": "rimraf -r dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/.../...git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/.../.../issues"
+  },
+  "homepage": "https://github.com/.../...",
+  "dependencies": {},
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^11.2.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.44.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "tsc-alias": "^1.2.9",
+    "typescript": "^4.2.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
