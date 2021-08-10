@@ -1,1 +1,1 @@
-export { CoreClass } from '@src/core';
+console.log('hello world');

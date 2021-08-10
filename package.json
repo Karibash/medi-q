@@ -1,10 +1,14 @@
 {
-  "name": "typescript-library-template",
+  "name": "@karibash/react-media-query",
   "version": "1.0.0",
-  "description": "",
+  "description": "Media queries that can be used with React Hooks and CSS in JS.",
   "private": true,
   "keywords": [
-    "typescript"
+    "typescript",
+    "react",
+    "media-query",
+    "responsive",
+    "breakpoint"
   ],
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
@@ -14,23 +18,22 @@
   "scripts": {
     "prebuild": "npm run clean",
     "build": "tsc && tsc-alias",
-    "postbuild": "npm run rollup && npm run prepare-packages && npm run prepare-dist",
+    "postbuild": "npm run rollup && npm run prepare-dist",
     "rollup": "rollup -c tools/rollup.config.js",
-    "prepare-packages": "node tools/prepare-package.js",
     "prepare-dist": "node tools/prepare-dist.js",
     "prepare": "npm run build",
     "clean": "rimraf -r dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/.../...git"
+    "url": "git+https://github.com/Karibash/react-media-query.git"
   },
-  "author": "",
+  "author": "Karibash",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/.../.../issues"
+    "url": "https://github.com/Karibash/react-media-query/issues"
   },
-  "homepage": "https://github.com/.../...",
+  "homepage": "https://github.com/Karibash/react-media-query",
   "dependencies": {},
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^11.2.1",

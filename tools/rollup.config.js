@@ -1,30 +1,15 @@
 import resolve from '@rollup/plugin-node-resolve';
-import path from 'path';
 import { terser } from 'rollup-plugin-terser';
 
-const { entryPoints, entryPointPaths } = require('./entry-points');
 const packageJson = require('../package.json');
 
-const toRelativePathFromDist = (id, parentId) => {
-  const distRoot = path.resolve(__dirname, '../dist');
-  if (path.isAbsolute(id)) {
-    return path.relative(distRoot, id);
-  }
-  return path.relative(distRoot, path.resolve(parentId, '../', id));
-};
-
-const isExternal = (id, parentId) => {
-  const relativePath = toRelativePathFromDist(id, parentId);
-  return entryPointPaths.includes(relativePath);
-};
-
-const prepareBundle = dirs => {
-  const dir = path.join('./dist', ...dirs);
-  return {
-    input: `${dir}/index.js`,
-    external: isExternal,
+const external = [...Object.keys(packageJson.devDependencies || {})];
+export default [
+  {
+    input: `./dist/index.js`,
+    external: external,
     output: {
-      file: `${dir}/index.cjs.js`,
+      file: `./dist/index.cjs.js`,
       format: 'cjs',
       sourcemap: true,
       exports: 'named',
@@ -33,14 +18,10 @@ const prepareBundle = dirs => {
     plugins: [
       resolve(),
     ],
-  };
-};
-
-export default [
-  ...entryPoints.map(prepareBundle),
+  },
   {
     input: './dist/index.js',
-    external: [...Object.keys(packageJson.devDependencies || {})],
+    external: external,
     output: [
       {
         name: packageJson.name,
