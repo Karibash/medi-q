@@ -1,1 +1,1 @@
-console.log('hello world');
+export * from '@src/core';

@@ -34,9 +34,22 @@
     "url": "https://github.com/Karibash/react-media-query/issues"
   },
   "homepage": "https://github.com/Karibash/react-media-query",
-  "dependencies": {},
+  "dependencies": {
+    "@karibash/pixel-units": "^2.1.1",
+    "tslib": "^2.3.1"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^11.2.1",
+    "@types/react": "^17.0.17",
+    "react": "^17.0.2",
     "rimraf": "^3.0.2",
     "rollup": "^2.44.0",
     "rollup-plugin-terser": "^7.0.2",
