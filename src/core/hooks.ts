@@ -1,7 +1,7 @@
 import { useContext, useEffect, useLayoutEffect, useState } from 'react';
 
 import { MediaQueryContext } from '@src/core/context';
-import { MediaQuery } from '@src/core/media-query';
+import { MediaQuery, MediaQueryInput } from '@src/core/media-query';
 
 const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
@@ -17,7 +17,7 @@ export type UseMediaQueryOptions = {
 };
 
 export const useMediaQuery = (
-  queryInput: string | ((mediaQuery: MediaQuery) => string),
+  queryInput: MediaQueryInput,
   options: UseMediaQueryOptions = {}
 ) => {
   const existsMatchMedia = typeof window !== 'undefined' && typeof window.matchMedia !== 'undefined';
@@ -27,7 +27,7 @@ export const useMediaQuery = (
   } = options;
 
   const mediaQuery = useMediaQueryContext();
-  const query = typeof queryInput === 'function' ? queryInput(mediaQuery) : queryInput;
+  const query = mediaQuery(queryInput);
 
   const [matches, setMatches] = useState(() => {
     if (matchMedia) return matchMedia(query).matches;
