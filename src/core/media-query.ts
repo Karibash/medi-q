@@ -1,15 +1,12 @@
 import { ConvertLengthUnitArgsOptions, convertUnits, LengthUnitSuffix, Unit } from '@karibash/pixel-units';
 
-export interface BreakPoint {
-  tiny: string;
-  small: string;
-  medium: string;
-  large: string;
-}
+export interface BreakPoint {}
 
-export type BreakPointKey = keyof BreakPoint;
+export type BreakPointKeyDefault = 'tiny' | 'small' | 'medium' | 'large';
 
-export type BreakPoints = { [key in BreakPointKey]: Unit<LengthUnitSuffix> };
+export type BreakPointKey = keyof BreakPoint extends never ? BreakPointKeyDefault : keyof BreakPoint;
+
+export type BreakPoints = Record<BreakPointKey, Unit<LengthUnitSuffix>>;
 
 export type MediaQueryType = 'max' | 'min';
 
