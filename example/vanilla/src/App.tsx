@@ -1,5 +1,5 @@
 import React from 'react';
-import { BreakPoints, MediaQueryProvider } from '@karibash/react-media-query';
+import { BreakPoints, MediaQueryProvider, createMediaQuery } from '@karibash/react-media-query';
 
 import Responsive from './Responsive';
 
@@ -12,7 +12,7 @@ const breakPoints: BreakPoints = {
 
 const App: React.FC = () => {
   return (
-    <MediaQueryProvider breakPoints={breakPoints}>
+    <MediaQueryProvider mediaQuery={createMediaQuery({ breakPoints })}>
       <Responsive />
     </MediaQueryProvider>
   );
