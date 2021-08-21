@@ -12,7 +12,7 @@ const breakPoints: BreakPoints = {
 
 const App: React.FC = () => {
   return (
-    <MediaQueryProvider mediaQuery={createMediaQuery({ breakPoints })}>
+    <MediaQueryProvider mediaQuery={createMediaQuery(breakPoints)}>
       <Responsive />
     </MediaQueryProvider>
   );

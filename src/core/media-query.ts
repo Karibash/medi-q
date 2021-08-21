@@ -66,22 +66,17 @@ const queryInputToQueryString = (queryInput: MediaQueryInput, breakPoints: Break
     .join('');
 };
 
-export type CreateMediaQueryArgs = {
-  breakPoints: BreakPoints;
-  unit?: LengthUnitSuffix,
-  options?: ConvertLengthUnitArgsOptions,
-};
-export const createMediaQuery = ({
-  breakPoints: _breakPoints,
-  unit = 'rem',
-  options = {
+export const createMediaQuery = (
+  breakPoints: BreakPoints,
+  unit: LengthUnitSuffix = 'rem',
+  options: ConvertLengthUnitArgsOptions = {
     rem: '16px',
     em: '16px',
     viewHeight: '1920px',
     viewWidth: '1080px',
   },
-}: CreateMediaQueryArgs): MediaQuery => {
-  const keys = Object.keys(_breakPoints);
-  const breakPoints = normalizedBreakPoints(_breakPoints, unit, options);
-  return (queryInput) => queryInputToQueryString(queryInput, breakPoints, keys);
+): MediaQuery => {
+  const keys = Object.keys(breakPoints);
+  const _breakPoints = normalizedBreakPoints(breakPoints, unit, options);
+  return (queryInput) => queryInputToQueryString(queryInput, _breakPoints, keys);
 };
