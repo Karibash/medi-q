@@ -6,10 +6,10 @@ const packageJson = require('../package.json');
 const external = [...Object.keys(packageJson.devDependencies || {})];
 export default [
   {
-    input: `./dist/index.js`,
+    input: `./dist/src/index.js`,
     external: external,
     output: {
-      file: `./dist/index.cjs.js`,
+      file: `./dist/src/index.cjs.js`,
       format: 'cjs',
       sourcemap: true,
       exports: 'named',
@@ -20,12 +20,12 @@ export default [
     ],
   },
   {
-    input: './dist/index.js',
+    input: './dist/src/index.js',
     external: external,
     output: [
       {
         name: packageJson.name,
-        file: `./dist/bundle.js`,
+        file: `./dist/src/bundle.js`,
         format: 'umd',
         sourcemap: true,
         exports: 'named',
@@ -33,7 +33,7 @@ export default [
       },
       {
         name: packageJson.name,
-        file: `./dist/bundle.min.js`,
+        file: `./dist/src/bundle.min.js`,
         format: 'umd',
         sourcemap: true,
         exports: 'named',

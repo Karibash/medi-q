@@ -15,16 +15,16 @@
     "pretty": true,
     "newLine": "lf",
     "outDir": "dist",
-    "rootDir": "src",
+    "rootDir": ".",
     "strictNullChecks": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
-      "@src/*": ["*"]
+      "@src/*": ["src/*"]
     }
   },
   "include": ["src/**/*.ts"]

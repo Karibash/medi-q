@@ -10,11 +10,11 @@
     "responsive",
     "breakpoint"
   ],
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "jsdelivr": "dist/bundle.min.js",
-  "unpkg": "dist/bundle.min.js",
+  "main": "dist/src/index.cjs.js",
+  "module": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "jsdelivr": "dist/src/bundle.min.js",
+  "unpkg": "dist/src/bundle.min.js",
   "scripts": {
     "prebuild": "npm run clean",
     "build": "tsc && tsc-alias",
