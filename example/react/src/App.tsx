@@ -1,5 +1,6 @@
 import React from 'react';
-import { BreakPoints, MediaQueryProvider, createMediaQuery } from '@karibash/react-media-query';
+import { BreakPoints, createMediaQuery } from '@karibash/react-media-query';
+import { MediaQueryProvider } from '@karibash/react-media-query/react';
 
 import Responsive from './Responsive';
 
