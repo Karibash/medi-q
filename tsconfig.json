@@ -15,7 +15,7 @@
     "pretty": true,
     "newLine": "lf",
     "outDir": "dist",
-    "rootDir": ".",
+    "rootDir": "src",
     "strictNullChecks": true,
     "noImplicitAny": true,
     "noImplicitThis": true,

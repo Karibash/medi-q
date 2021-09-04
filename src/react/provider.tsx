@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 
-import { MediaQueryContext } from './context';
-import { MediaQuery } from './media-query';
+import { MediaQuery } from '@src/core';
+import { MediaQueryContext } from '@src/react/context';
 
 export type MediaQueryProviderProps = {
   mediaQuery: MediaQuery;

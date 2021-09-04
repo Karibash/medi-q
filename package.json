@@ -10,16 +10,17 @@
     "responsive",
     "breakpoint"
   ],
-  "main": "dist/src/index.cjs.js",
-  "module": "dist/src/index.js",
-  "types": "dist/src/index.d.ts",
-  "jsdelivr": "dist/src/bundle.min.js",
-  "unpkg": "dist/src/bundle.min.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "jsdelivr": "dist/bundle.min.js",
+  "unpkg": "dist/bundle.min.js",
   "scripts": {
     "prebuild": "npm run clean",
     "build": "tsc && tsc-alias",
-    "postbuild": "npm run rollup && npm run prepare-dist",
+    "postbuild": "npm run rollup && npm run prepare-packages && npm run prepare-dist",
     "rollup": "rollup -c tools/rollup.config.js",
+    "prepare-packages": "node tools/prepare-package.js",
     "prepare-dist": "node tools/prepare-dist.js",
     "prepare": "npm run build",
     "clean": "rimraf -r dist"
