@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/Karibash/react-media-query",
   "dependencies": {
-    "@karibash/pixel-units": "^2.1.1",
+    "@karibash/pixel-units": "^2.2.0",
     "tslib": "^2.3.1"
   },
   "peerDependencies": {
@@ -48,14 +48,14 @@
     }
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^11.2.1",
-    "@types/react": "^17.0.17",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@types/react": "^17.0.19",
     "react": "^17.0.2",
     "rimraf": "^3.0.2",
-    "rollup": "^2.44.0",
+    "rollup": "^2.56.3",
     "rollup-plugin-terser": "^7.0.2",
-    "tsc-alias": "^1.2.9",
-    "typescript": "^4.2.3"
+    "tsc-alias": "^1.3.9",
+    "typescript": "^4.4.2"
   },
   "publishConfig": {
     "access": "public"
