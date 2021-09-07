@@ -49,7 +49,7 @@ export default [
     external: devDependencies,
     output: [
       {
-        name: packageJson.name,
+        name: 'MediaQuery',
         file: `./dist/bundle.js`,
         format: 'umd',
         sourcemap: true,
@@ -57,7 +57,7 @@ export default [
         externalLiveBindings: false,
       },
       {
-        name: packageJson.name,
+        name: 'MediaQuery',
         file: `./dist/bundle.min.js`,
         format: 'umd',
         sourcemap: true,
