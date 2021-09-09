@@ -1,4 +1,4 @@
 import { createContext } from 'react';
-import { MediaQuery } from '@medi-q/core';
+import { MediQ } from '@medi-q/core';
 
-export const MediaQueryContext = createContext<MediaQuery|undefined>(undefined);
+export const MediQContext = createContext<MediQ|undefined>(undefined);

@@ -1,6 +1,6 @@
 import React from 'react';
-import { BreakPoints, createMediaQuery } from '@medi-q/core';
-import { MediaQueryProvider } from '@medi-q/react';
+import { BreakPoints, createMediQ } from '@medi-q/core';
+import { MediQProvider } from '@medi-q/react';
 
 import Responsive from './Responsive';
 
@@ -13,9 +13,9 @@ const breakPoints: BreakPoints = {
 
 const App: React.FC = () => {
   return (
-    <MediaQueryProvider mediaQuery={createMediaQuery(breakPoints)}>
+    <MediQProvider mediQ={createMediQ(breakPoints)}>
       <Responsive />
-    </MediaQueryProvider>
+    </MediQProvider>
   );
 };
 

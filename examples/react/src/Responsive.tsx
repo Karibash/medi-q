@@ -1,10 +1,10 @@
 import React from 'react';
-import { useMediaQuery } from '@medi-q/react';
+import { useMediQ } from '@medi-q/react';
 
 const Responsive: React.FC = () => {
-  const isLessThanSmall = useMediaQuery('max-small');
-  const isGreaterThanMedium = useMediaQuery('min-medium');
-  const isBetweenSmallAndMedium = useMediaQuery('min-small-and-max-medium');
+  const isLessThanSmall = useMediQ('max-small');
+  const isGreaterThanMedium = useMediQ('min-medium');
+  const isBetweenSmallAndMedium = useMediQ('min-small-and-max-medium');
   return (
     <>
       {isLessThanSmall && <div>isLessThanSmall</div>}

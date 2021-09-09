@@ -1,6 +1,6 @@
 import { ConvertLengthUnitArgsOptions, convertUnits, LengthUnitSuffix, Unit } from '@karibash/pixel-units';
 
-import { BreakPointKey, BreakPoints, MediaQueryInput } from './types';
+import { BreakPointKey, BreakPoints, MediQInput } from './types';
 
 export const normalizedBreakPoints = (
   breakPoints: BreakPoints,
@@ -14,7 +14,7 @@ export const normalizedBreakPoints = (
     }, {});
 };
 
-export const parseQueryInput = (queryInput: MediaQueryInput, keys: string[]): string[][] => {
+export const parseQueryInput = (queryInput: MediQInput, keys: string[]): string[][] => {
   const parsedQueryInput = queryInput.split('-')
     .reduce<string[][]>((previous, current) => {
       if (current === 'and' || current === 'or') {
@@ -39,7 +39,7 @@ export const parseQueryInput = (queryInput: MediaQueryInput, keys: string[]): st
 };
 
 export const queryInputToQueryString = (
-  queryInput: MediaQueryInput,
+  queryInput: MediQInput,
   breakPoints: BreakPoints,
   keys: string[],
 ): string => {

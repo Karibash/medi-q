@@ -1,20 +1,20 @@
 import React, { ReactNode } from 'react';
-import { MediaQuery } from '@medi-q/core';
+import { MediQ } from '@medi-q/core';
 
-import { MediaQueryContext } from './context';
+import { MediQContext } from './context';
 
-export type MediaQueryProviderProps = {
-  mediaQuery: MediaQuery;
+export type MediQProviderProps = {
+  mediQ: MediQ;
   children: ReactNode;
 };
 
-export const MediaQueryProvider: React.FC<MediaQueryProviderProps> = ({
-  mediaQuery,
+export const MediQProvider: React.FC<MediQProviderProps> = ({
+  mediQ,
   children,
 }) => {
   return (
-    <MediaQueryContext.Provider value={mediaQuery}>
+    <MediQContext.Provider value={mediQ}>
       {children}
-    </MediaQueryContext.Provider>
+    </MediQContext.Provider>
   );
 };

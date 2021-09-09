@@ -1,24 +1,24 @@
 import { useContext, useEffect, useLayoutEffect, useState } from 'react';
-import { MediaQuery, MediaQueryInput } from '@medi-q/core';
+import { MediQ, MediQInput } from '@medi-q/core';
 
-import { MediaQueryContext } from './context';
+import { MediQContext } from './context';
 
 const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
-export const useMediaQueryContext = (): MediaQuery => {
-  const mediaQuery = useContext(MediaQueryContext);
-  if (!mediaQuery) throw new Error('useMediaQueryContext must be inside a MediaQueryProvider.');
-  return mediaQuery;
+export const useMediQContext = (): MediQ => {
+  const mediQ = useContext(MediQContext);
+  if (!mediQ) throw new Error('useMediQContext must be inside a MediQProvider.');
+  return mediQ;
 };
 
-export type UseMediaQueryOptions = {
+export type UseMediQOptions = {
   matchMedia?: (query: string) => MediaQueryList | { matches: boolean };
   defaultMatches?: boolean;
 };
 
-export const useMediaQuery = (
-  queryInput: MediaQueryInput,
-  options: UseMediaQueryOptions = {}
+export const useMediQ = (
+  queryInput: MediQInput,
+  options: UseMediQOptions = {}
 ) => {
   const existsMatchMedia = typeof window !== 'undefined' && typeof window.matchMedia !== 'undefined';
   const {
@@ -26,8 +26,8 @@ export const useMediaQuery = (
     defaultMatches = false,
   } = options;
 
-  const mediaQuery = useMediaQueryContext();
-  const query = mediaQuery(queryInput);
+  const mediQ = useMediQContext();
+  const query = mediQ(queryInput);
 
   const [matches, setMatches] = useState(() => {
     if (matchMedia) return matchMedia(query).matches;

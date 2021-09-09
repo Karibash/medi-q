@@ -8,14 +8,14 @@ export type BreakPointKey = keyof BreakPoint extends never ? BreakPointKeyDefaul
 
 export type BreakPoints = Record<BreakPointKey, Unit<LengthUnitSuffix>>;
 
-export type MediaQueryType = 'max' | 'min';
+export type MediQType = 'max' | 'min';
 
-export type MediaQueryOperator = 'and' | 'or';
+export type MediQOperator = 'and' | 'or';
 
-export type MediaQueryCondition = `${MediaQueryType}-${BreakPointKey}`;
+export type MediQCondition = `${MediQType}-${BreakPointKey}`;
 
-export type MediaQueryMultipleCondition= `${MediaQueryCondition}-${MediaQueryOperator}-${MediaQueryCondition}`;
+export type MediQMultipleCondition= `${MediQCondition}-${MediQOperator}-${MediQCondition}`;
 
-export type MediaQueryInput = MediaQueryCondition |　MediaQueryMultipleCondition;
+export type MediQInput = MediQCondition |　MediQMultipleCondition;
 
-export type MediaQuery = (queryInput: MediaQueryInput) => string;
+export type MediQ = (queryInput: MediQInput) => string;

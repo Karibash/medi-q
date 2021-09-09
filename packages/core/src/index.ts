@@ -1,15 +1,15 @@
 import { ConvertLengthUnitArgsOptions, LengthUnitSuffix } from '@karibash/pixel-units';
 
 import { normalizedBreakPoints, queryInputToQueryString } from './internals';
-import { BreakPoints, MediaQuery } from './types';
+import { BreakPoints, MediQ } from './types';
 
 export * from './types';
 
-export const createMediaQuery = (
+export const createMediQ = (
   breakPoints: BreakPoints,
   unit: LengthUnitSuffix = 'rem',
   options?: ConvertLengthUnitArgsOptions,
-): MediaQuery => {
+): MediQ => {
   const keys = Object.keys(breakPoints);
   const _breakPoints = normalizedBreakPoints(breakPoints, unit, options);
   return (queryInput) => queryInputToQueryString(queryInput, _breakPoints, keys);
