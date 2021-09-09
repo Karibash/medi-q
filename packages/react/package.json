@@ -1,0 +1,61 @@
+{
+  "name": "@medi-q/react",
+  "version": "1.0.0",
+  "description": "medi-q for react.",
+  "main": "dist/medi-q-react.cjs.js",
+  "module": "dist/medi-q-react.esm.js",
+  "unpkg": "dist/medi-q-react.umd.min.js",
+  "jsdelivr": "dist/medi-q-react.umd.min.js",
+  "umd:main": "dist/medi-q-react.umd.min.js",
+  "types": "dist/medi-q-react.cjs.d.ts",
+  "browser": {
+    "./dist/medi-q-react.cjs.js": "./dist/medi-q-react.browser.cjs.js",
+    "./dist/medi-q-react.esm.js": "./dist/medi-q-react.browser.esm.js"
+  },
+  "files": [
+    "src",
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "typescript",
+    "react",
+    "media-query",
+    "responsive",
+    "breakpoint"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Karibash/medi-q.git"
+  },
+  "author": "Karibash",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Karibash/medi-q/issues"
+  },
+  "homepage": "https://github.com/Karibash/medi-q/tree/main/packages/react",
+  "dependencies": {
+    "@babel/runtime": "^7.15.4",
+    "@medi-q/core": "^1.0.0",
+    "typescript": "^4.4.2"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.19",
+    "react": "^17.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "preconstruct": {
+    "umdName": "mediqReact"
+  }
+}

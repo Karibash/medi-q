@@ -1,6 +1,6 @@
 import { ConvertLengthUnitArgsOptions, convertUnits, LengthUnitSuffix, Unit } from '@karibash/pixel-units';
 
-import { BreakPointKey, BreakPoints, MediaQueryInput } from '@src/core/types';
+import { BreakPointKey, BreakPoints, MediaQueryInput } from './types';
 
 export const normalizedBreakPoints = (
   breakPoints: BreakPoints,

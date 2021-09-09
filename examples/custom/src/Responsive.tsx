@@ -1,5 +1,5 @@
 import React from 'react';
-import { useMediaQuery } from '@karibash/react-media-query';
+import { useMediaQuery } from '@medi-q/react';
 
 const Responsive: React.FC = () => {
   const isLessThanSmall = useMediaQuery('max-sm');

@@ -1,7 +1,7 @@
 import { useContext, useEffect, useLayoutEffect, useState } from 'react';
+import { MediaQuery, MediaQueryInput } from '@medi-q/core';
 
-import { MediaQuery, MediaQueryInput } from '@src/core';
-import { MediaQueryContext } from '@src/react/context';
+import { MediaQueryContext } from './context';
 
 const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 

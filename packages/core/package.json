@@ -1,0 +1,48 @@
+{
+  "name": "@medi-q/core",
+  "version": "1.0.0",
+  "description": "Type-safe media queries.",
+  "main": "dist/medi-q-core.cjs.js",
+  "module": "dist/medi-q-core.esm.js",
+  "unpkg": "dist/medi-q-core.umd.min.js",
+  "jsdelivr": "dist/medi-q-core.umd.min.js",
+  "umd:main": "dist/medi-q-core.umd.min.js",
+  "types": "dist/medi-q-core.cjs.d.ts",
+  "browser": {
+    "./dist/medi-q-core.cjs.js": "./dist/medi-q-core.browser.cjs.js",
+    "./dist/medi-q-core.esm.js": "./dist/medi-q-core.browser.esm.js"
+  },
+  "files": [
+    "src",
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "typescript",
+    "react",
+    "media-query",
+    "responsive",
+    "breakpoint"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Karibash/medi-q.git"
+  },
+  "author": "Karibash",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Karibash/medi-q/issues"
+  },
+  "homepage": "https://github.com/Karibash/medi-q/tree/main/packages/core",
+  "dependencies": {
+    "@karibash/pixel-units": "^2.2.0",
+    "typescript": "^4.4.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "preconstruct": {
+    "umdName": "mediq"
+  }
+}

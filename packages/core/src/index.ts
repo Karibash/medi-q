@@ -1,9 +1,9 @@
 import { ConvertLengthUnitArgsOptions, LengthUnitSuffix } from '@karibash/pixel-units';
 
-import { normalizedBreakPoints, queryInputToQueryString } from '@src/core/internals';
-import { BreakPoints, MediaQuery } from '@src/core/types';
+import { normalizedBreakPoints, queryInputToQueryString } from './internals';
+import { BreakPoints, MediaQuery } from './types';
 
-export * from '@src/core/types';
+export * from './types';
 
 export const createMediaQuery = (
   breakPoints: BreakPoints,

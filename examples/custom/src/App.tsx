@@ -1,14 +1,14 @@
 import React from 'react';
-import { BreakPoints, createMediaQuery } from '@karibash/react-media-query';
-import { MediaQueryProvider } from '@karibash/react-media-query/react';
+import { BreakPoints, createMediaQuery } from '@medi-q/core';
+import { MediaQueryProvider } from '@medi-q/react';
 
 import Responsive from './Responsive';
 
 const breakPoints: BreakPoints = {
-  tiny: '400px',
-  small: '600px',
-  medium: '800px',
-  large: '1000px',
+  xs: '400px',
+  sm: '600px',
+  md: '800px',
+  lg: '1000px',
 };
 
 const App: React.FC = () => {
