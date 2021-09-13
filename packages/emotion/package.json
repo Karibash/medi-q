@@ -1,0 +1,67 @@
+{
+  "name": "@medi-q/emotion",
+  "version": "1.0.0",
+  "description": "medi-q for emotion.",
+  "main": "dist/medi-q-emotion.cjs.js",
+  "module": "dist/medi-q-emotion.esm.js",
+  "unpkg": "dist/medi-q-emotion.umd.min.js",
+  "jsdelivr": "dist/medi-q-emotion.umd.min.js",
+  "umd:main": "dist/medi-q-emotion.umd.min.js",
+  "types": "dist/medi-q-emotion.cjs.d.ts",
+  "browser": {
+    "./dist/medi-q-emotion.cjs.js": "./dist/medi-q-emotion.browser.cjs.js",
+    "./dist/medi-q-emotion.esm.js": "./dist/medi-q-emotion.browser.esm.js"
+  },
+  "files": [
+    "src",
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "typescript",
+    "react",
+    "emotion",
+    "media-query",
+    "responsive",
+    "breakpoint"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Karibash/medi-q.git"
+  },
+  "author": "Karibash",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Karibash/medi-q/issues"
+  },
+  "homepage": "https://github.com/Karibash/medi-q/tree/main/packages/emotion",
+  "dependencies": {
+    "@babel/runtime": "^7.15.4",
+    "@medi-q/core": "^1.0.0",
+    "@medi-q/react": "^1.0.0",
+    "typescript": "^4.4.2"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.0.0-rc.0",
+    "react": ">=16.8.0"
+  },
+  "peerDependenciesMeta": {
+    "@emotion/react": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.4.1",
+    "react": "^17.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "preconstruct": {
+    "umdName": "mediqEmotion"
+  }
+}
