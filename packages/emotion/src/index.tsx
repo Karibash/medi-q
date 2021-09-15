@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { MediQ } from '@medi-q/core';
+import { MediQ, MediQInput } from '@medi-q/core';
 import { MediQProvider } from '@medi-q/react';
 import { ThemeProvider as EmotionThemeProvider, Theme } from '@emotion/react';
 
@@ -22,7 +22,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
 }) => {
   return (
     <MediQProvider mediQ={mediQ}>
-      <EmotionThemeProvider theme={{ ...theme, mediQ: args => `@media ${mediQ(args)}` }}>
+      <EmotionThemeProvider theme={{ ...theme, mediQ: (input: MediQInput) => `@media ${mediQ(input)}` }}>
         {children}
       </EmotionThemeProvider>
     </MediQProvider>
