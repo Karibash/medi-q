@@ -21,7 +21,7 @@
   "keywords": [
     "typescript",
     "react",
-    "styled",
+    "styled-components",
     "media-query",
     "responsive",
     "breakpoint"
