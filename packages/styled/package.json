@@ -1,0 +1,68 @@
+{
+  "name": "@medi-q/styled",
+  "version": "1.0.0",
+  "description": "medi-q for styled-components.",
+  "main": "dist/medi-q-styled.cjs.js",
+  "module": "dist/medi-q-styled.esm.js",
+  "unpkg": "dist/medi-q-styled.umd.min.js",
+  "jsdelivr": "dist/medi-q-styled.umd.min.js",
+  "umd:main": "dist/medi-q-styled.umd.min.js",
+  "types": "dist/medi-q-styled.cjs.d.ts",
+  "browser": {
+    "./dist/medi-q-styled.cjs.js": "./dist/medi-q-styled.browser.cjs.js",
+    "./dist/medi-q-styled.esm.js": "./dist/medi-q-styled.browser.esm.js"
+  },
+  "files": [
+    "src",
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "typescript",
+    "react",
+    "styled",
+    "media-query",
+    "responsive",
+    "breakpoint"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Karibash/medi-q.git"
+  },
+  "author": "Karibash",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Karibash/medi-q/issues"
+  },
+  "homepage": "https://github.com/Karibash/medi-q/tree/main/packages/styled",
+  "dependencies": {
+    "@babel/runtime": "^7.15.4",
+    "@medi-q/core": "^1.0.0",
+    "@medi-q/react": "^1.0.0",
+    "typescript": "^4.4.2"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "styled-components": "^v5.0.0-rc.0"
+  },
+  "peerDependenciesMeta": {
+    "styled-components": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.14",
+    "react": "^17.0.2",
+    "styled-components": "^5.3.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "preconstruct": {
+    "umdName": "mediqStyled"
+  }
+}

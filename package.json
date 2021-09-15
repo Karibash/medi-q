@@ -42,7 +42,8 @@
       "packages/*"
     ],
     "globals": {
-      "react": "React"
+      "react": "React",
+      "styled-components": "styled"
     }
   }
 }
