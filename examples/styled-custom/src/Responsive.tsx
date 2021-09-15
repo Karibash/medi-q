@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import { useMediQ } from '@medi-q/react';
 
 const Wrapper = styled.div`
-  background-color: ${props => props.theme.defaultBackgroundColor};
+  background: ${props => props.theme.background};
 
   ${props => props.theme.mediQ('max-md')} {
-    background-color: blue;
+    background: blue;
   }
 `;
 

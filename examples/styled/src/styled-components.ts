@@ -2,6 +2,6 @@ import 'styled-components';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
-    defaultBackgroundColor: string;
+    background: string;
   }
 }

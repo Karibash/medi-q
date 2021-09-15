@@ -13,7 +13,7 @@ const breakPoints: BreakPoints = {
 
 const App: React.FC = () => {
   return (
-    <ThemeProvider theme={{ defaultBackgroundColor: 'red' }} mediQ={createMediQ(breakPoints)}>
+    <ThemeProvider theme={{ background: 'red' }} mediQ={createMediQ(breakPoints)}>
       <Responsive />
     </ThemeProvider>
   );
