@@ -1,0 +1,20 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@1.6.1/schema.json",
+  "changelog": [
+    "@changesets/cli/changelog",
+    { "repo": "Karibash/medi-q" }
+  ],
+  "commit": false,
+  "linked": [
+    [
+      "@medi-q/core",
+      "@medi-q/emotion",
+      "@medi-q/react",
+      "@medi-q/styled"
+    ]
+  ],
+  "access": "public",
+  "baseBranch": "main",
+  "updateInternalDependencies": "patch",
+  "ignore": []
+}
