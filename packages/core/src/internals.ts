@@ -7,24 +7,22 @@ export const normalizedBreakPoints = (
   unit: LengthUnitSuffix,
   options?: ConvertLengthUnitArgsOptions,
 ): BreakPoints => {
-  return Object.entries<Unit<LengthUnitSuffix>>(breakPoints)
-    .reduce<any>((previous, current) => {
-      previous[current[0]] = convertUnits(current[1] as any, unit, options);
-      return previous;
-    }, {});
+  return Object.entries<Unit<LengthUnitSuffix>>(breakPoints).reduce<any>((previous, current) => {
+    previous[current[0]] = convertUnits(current[1] as any, unit, options);
+    return previous;
+  }, {});
 };
 
 export const parseQueryInput = (queryInput: MediQInput, keys: string[]): string[][] => {
-  const parsedQueryInput = queryInput.split('-')
-    .reduce<string[][]>((previous, current) => {
-      if (current === 'and' || current === 'or') {
-        previous.push([current], []);
-        return previous;
-      }
-
-      previous[previous.length - 1].push(current);
+  const parsedQueryInput = queryInput.split('-').reduce<string[][]>((previous, current) => {
+    if (current === 'and' || current === 'or') {
+      previous.push([current], []);
       return previous;
-    }, [[]]);
+    }
+
+    previous[previous.length - 1].push(current);
+    return previous;
+  }, [[]]);
 
   for (const args of parsedQueryInput) {
     if (2 <= args.length) {

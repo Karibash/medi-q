@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
 import { useMediQ } from '@medi-q/react';
 
 const Wrapper = styled.div`

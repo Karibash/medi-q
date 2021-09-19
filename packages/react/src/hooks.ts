@@ -18,8 +18,8 @@ export type UseMediQOptions = {
 
 export const useMediQ = (
   queryInput: MediQInput,
-  options: UseMediQOptions = {}
-) => {
+  options: UseMediQOptions = {},
+): boolean => {
   const existsMatchMedia = typeof window !== 'undefined' && typeof window.matchMedia !== 'undefined';
   const {
     matchMedia = existsMatchMedia ? window.matchMedia : undefined,
@@ -39,11 +39,11 @@ export const useMediQ = (
     const mediaQueryList = matchMedia(query);
     if (!('addListener' in mediaQueryList && 'removeListener' in mediaQueryList)) return;
 
-    const update = () => setMatches(mediaQueryList.matches);
+    const update = (): void => setMatches(mediaQueryList.matches);
     mediaQueryList.addListener(update);
     return () => {
       mediaQueryList.removeListener(update);
-    }
+    };
   }, [query, matchMedia]);
 
   return matches;

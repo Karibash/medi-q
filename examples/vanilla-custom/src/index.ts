@@ -12,7 +12,7 @@ const maxSmall = mediQ('max-sm');
 const minMedium = mediQ('min-md');
 const minSmallAndMaxMedium = mediQ('min-sm-and-max-md');
 
-const onResize = () => {
+const onResize = (): void => {
   if (matchMedia(maxSmall).matches) {
     mainElement.textContent = 'isLessThanSmall';
   } else if (matchMedia(minMedium).matches) {
