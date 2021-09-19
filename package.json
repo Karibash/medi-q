@@ -12,6 +12,8 @@
   "scripts": {
     "build:watch": "preconstruct watch",
     "build": "preconstruct build",
+    "lint": "eslint . --fix",
+    "lint:check": "eslint .",
     "changeset": "changeset",
     "version-apply": "changeset version",
     "release": "yarn build && changeset publish"
@@ -39,7 +41,19 @@
     "@babel/preset-typescript": "^7.15.0",
     "@changesets/changelog-github": "^0.4.1",
     "@changesets/cli": "^2.17.0",
-    "@preconstruct/cli": "^2.1.2"
+    "@preconstruct/cli": "^2.1.2",
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-config-standard-jsx": "^10.0.0",
+    "eslint-config-standard-react": "^11.0.1",
+    "eslint-config-standard-with-typescript": "^21.0.1",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.25.2",
+    "eslint-plugin-react-hooks": "^4.2.0"
   },
   "preconstruct": {
     "packages": [
