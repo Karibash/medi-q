@@ -19,6 +19,7 @@
     "@typescript-eslint/consistent-type-definitions": "off",
     "@typescript-eslint/semi": ["error", "always"],
     "@typescript-eslint/comma-dangle": ["error", "always-multiline"],
+    "@typescript-eslint/no-explicit-any": "error",
     "@typescript-eslint/triple-slash-reference": ["error", {
       "types": "prefer-import"
     }],
