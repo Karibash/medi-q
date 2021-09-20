@@ -35,7 +35,7 @@
   },
   "homepage": "https://github.com/Karibash/medi-q/tree/main/packages/core",
   "dependencies": {
-    "@karibash/pixel-units": "^2.2.0"
+    "@karibash/pixel-units": "^2.3.0"
   },
   "devDependencies": {
     "typescript": "^4.4.3"
