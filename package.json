@@ -10,6 +10,7 @@
     "breakpoint"
   ],
   "scripts": {
+    "prepare": "simple-git-hooks",
     "build:watch": "preconstruct watch",
     "build": "preconstruct build",
     "lint": "eslint . --fix",
@@ -17,6 +18,16 @@
     "changeset": "changeset",
     "version-apply": "changeset version",
     "release": "yarn build && changeset publish"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,md}": [
+      "eslint . --fix",
+      "git add"
+    ]
+  },
+  "simple-git-hooks": {
+    "post-commit": "git update-index --again",
+    "pre-commit": "yarn lint-staged"
   },
   "repository": {
     "type": "git",
@@ -53,7 +64,9 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.25.3",
-    "eslint-plugin-react-hooks": "^4.2.0"
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "lint-staged": "^11.1.2",
+    "simple-git-hooks": "^2.6.1"
   },
   "preconstruct": {
     "packages": [
