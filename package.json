@@ -23,7 +23,7 @@
     "release": "yarn build && changeset publish"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,md}": [
+    "*.{js,jsx,ts,tsx}": [
       "eslint . --fix",
       "git add"
     ]
