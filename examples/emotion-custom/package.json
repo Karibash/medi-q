@@ -1,6 +1,5 @@
 {
   "name": "medi-q-emotion-custom-example",
-  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@emotion/css": "^11.1.3",

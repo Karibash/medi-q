@@ -1,6 +1,5 @@
 {
   "name": "medi-q-styled-custom-example",
-  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@types/node": "^12.0.0",
