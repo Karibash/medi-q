@@ -1,6 +1,6 @@
 {
   "name": "@medi-q/styled",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "medi-q for styled-components.",
   "main": "dist/medi-q-styled.cjs.js",
   "module": "dist/medi-q-styled.esm.js",
@@ -38,8 +38,8 @@
   "homepage": "https://github.com/Karibash/medi-q/tree/main/packages/styled",
   "dependencies": {
     "@babel/runtime": "^7.15.4",
-    "@medi-q/core": "^1.0.0",
-    "@medi-q/react": "^1.0.0"
+    "@medi-q/core": "^0.0.1",
+    "@medi-q/react": "^0.0.1"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
