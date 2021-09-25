@@ -1,5 +1,6 @@
 {
   "name": "medi-q-vanilla-custom-example",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "build": "webpack",
