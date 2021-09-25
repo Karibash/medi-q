@@ -35,6 +35,7 @@
   },
   "homepage": "https://github.com/Karibash/medi-q/tree/main/packages/core",
   "dependencies": {
+    "@babel/runtime": "^7.15.4",
     "@karibash/pixel-units": "^2.3.0"
   },
   "devDependencies": {

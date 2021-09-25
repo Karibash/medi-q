@@ -10,7 +10,7 @@ export const normalizedBreakPoints = (
   return Object.entries<Unit<LengthUnitSuffix>>(breakPoints).reduce<BreakPoints>((previous, current) => {
     previous[current[0] as BreakPointKey] = convertUnits(current[1], unit, options);
     return previous;
-  }, breakPoints);
+  }, { ...breakPoints });
 };
 
 export const parseQueryInput = (queryInput: MediQInput, keys: string[]): string[][] => {
