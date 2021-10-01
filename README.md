@@ -3,6 +3,10 @@
 [![Github](https://img.shields.io/github/followers/Karibash?label=Follow&logo=github&style=social)](https://github.com/Karibash?tab=followers)
 [![Twitter](https://img.shields.io/twitter/follow/Karibash?label=Follow&style=social)](https://twitter.com/intent/follow?screen_name=Karibash)
 
+medi-q is currently an experimental version.
+
+Please note that destructive changes may be made.
+
 ## 🔧 Plugins
 
 - [react](packages/react)
