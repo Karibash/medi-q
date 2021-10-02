@@ -1,6 +1,6 @@
 {
   "name": "@medi-q/emotion",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "medi-q for emotion.",
   "main": "dist/medi-q-emotion.cjs.js",
   "module": "dist/medi-q-emotion.esm.js",
@@ -38,8 +38,8 @@
   "homepage": "https://github.com/Karibash/medi-q/tree/main/packages/emotion",
   "dependencies": {
     "@babel/runtime": "^7.15.4",
-    "@medi-q/core": "^0.0.2",
-    "@medi-q/react": "^0.0.2"
+    "@medi-q/core": "^0.0.3",
+    "@medi-q/react": "^0.0.3"
   },
   "peerDependencies": {
     "@emotion/react": "^11.0.0-rc.0",

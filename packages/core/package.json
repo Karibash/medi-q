@@ -1,6 +1,6 @@
 {
   "name": "@medi-q/core",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Type-safe media queries.",
   "main": "dist/medi-q-core.cjs.js",
   "module": "dist/medi-q-core.esm.js",
