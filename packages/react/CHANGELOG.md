@@ -1,5 +1,14 @@
 # @medi-q/react
 
+## 0.0.3
+
+### Patch Changes
+
+- [`8fcbce8`](https://github.com/Karibash/medi-q/commit/8fcbce84f79bdaa051c78fee6db657b92e4decc9) Thanks [@Karibash](https://github.com/Karibash)! - Update README.md
+
+- Updated dependencies [[`8fcbce8`](https://github.com/Karibash/medi-q/commit/8fcbce84f79bdaa051c78fee6db657b92e4decc9)]:
+  - @medi-q/core@0.0.3
+
 ## 0.0.2
 
 ### Patch Changes
