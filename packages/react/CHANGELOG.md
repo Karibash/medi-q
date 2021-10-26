@@ -1,5 +1,11 @@
 # @medi-q/react
 
+## 0.1.0
+
+### Minor Changes
+
+- [#2](https://github.com/Karibash/medi-q/pull/2) [`7652dd3`](https://github.com/Karibash/medi-q/commit/7652dd3cfff18c653d8efa4ada7809633bd68e00) Thanks [@Karibash](https://github.com/Karibash)! - Make it possible to use arrays as arguments to the useMediQ hook
+
 ## 0.0.3
 
 ### Patch Changes

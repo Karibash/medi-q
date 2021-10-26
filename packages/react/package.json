@@ -1,6 +1,6 @@
 {
   "name": "@medi-q/react",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "medi-q for react.",
   "main": "dist/medi-q-react.cjs.js",
   "module": "dist/medi-q-react.esm.js",
