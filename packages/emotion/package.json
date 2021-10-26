@@ -1,6 +1,6 @@
 {
   "name": "@medi-q/emotion",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "medi-q for emotion.",
   "main": "dist/medi-q-emotion.cjs.js",
   "module": "dist/medi-q-emotion.esm.js",
@@ -39,7 +39,7 @@
   "dependencies": {
     "@babel/runtime": "^7.15.4",
     "@medi-q/core": "^0.0.3",
-    "@medi-q/react": "^0.0.3"
+    "@medi-q/react": "^0.1.0"
   },
   "peerDependencies": {
     "@emotion/react": "^11.0.0-rc.0",

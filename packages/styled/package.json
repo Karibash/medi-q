@@ -1,6 +1,6 @@
 {
   "name": "@medi-q/styled",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "medi-q for styled-components.",
   "main": "dist/medi-q-styled.cjs.js",
   "module": "dist/medi-q-styled.esm.js",
@@ -39,7 +39,7 @@
   "dependencies": {
     "@babel/runtime": "^7.15.4",
     "@medi-q/core": "^0.0.3",
-    "@medi-q/react": "^0.0.3"
+    "@medi-q/react": "^0.1.0"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
