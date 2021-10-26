@@ -29,8 +29,20 @@ export const useMediQ = (
   } = options;
 
   const mediQ = useMediQContext();
-  const inputs = Array.isArray(queryInput) ? queryInput : [queryInput];
-  const queries = inputs.map(input => mediQ(input));
+
+  const [queries, setQueries] = useState(() => {
+    const inputs = Array.isArray(queryInput) ? queryInput : [queryInput];
+    return inputs.map(input => mediQ(input));
+  });
+
+  useIsomorphicLayoutEffect(() => {
+    const inputs = Array.isArray(queryInput) ? queryInput : [queryInput];
+    setQueries(previous => {
+      const newQueries = inputs.map(input => mediQ(input));
+      if (previous.length === (new Set([...previous, ...newQueries])).size) return previous;
+      return newQueries;
+    });
+  }, [queryInput, mediQ]);
 
   const [matches, setMatches] = useState(() => {
     if (matchMedia) return queries[test](query => matchMedia(query).matches);
@@ -45,7 +57,7 @@ export const useMediQ = (
     return () => {
       mediaQueries.forEach(mediaQuery => 'removeListener' in mediaQuery ? mediaQuery.removeListener(update) : null);
     };
-  }, [queryInput, matchMedia]);
+  }, [queries, matchMedia]);
 
   return matches;
 };
