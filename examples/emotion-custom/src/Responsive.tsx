@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { useMediQ } from '@medi-q/react';
+import { useMediQ, UseMediQOptions } from '@medi-q/react';
 
 const Wrapper = styled.div`
   background: ${props => props.theme.background};
@@ -10,19 +10,23 @@ const Wrapper = styled.div`
   }
 `;
 
+const useMediQOptions: UseMediQOptions = {
+  onChange: event => console.log(event),
+};
+
 const Responsive: React.FC = () => {
-  const isLessThanSmall = useMediQ('max-sm');
-  const isGreaterThanMedium = useMediQ('min-md');
-  const isBetweenSmallAndMedium = useMediQ('min-sm-and-max-md');
-  const isLessThanSmallOrGreaterThanLarge1 = useMediQ('max-sm-or-min-lg');
-  const isLessThanSmallOrGreaterThanLarge2 = useMediQ(['max-sm', 'min-lg']);
+  const isLessThanSmall = useMediQ('max-sm', useMediQOptions);
+  const isGreaterThanMedium = useMediQ('min-md', useMediQOptions);
+  const isBetweenSmallAndMedium = useMediQ('min-sm-and-max-md', useMediQOptions);
+  const isLessThanMediumOrGreaterThanLarge1 = useMediQ('max-md-or-min-lg', useMediQOptions);
+  const isLessThanMediumOrGreaterThanLarge2 = useMediQ(['max-md', 'min-lg'], useMediQOptions);
   return (
     <Wrapper>
       {isLessThanSmall && <div>isLessThanSmall</div>}
       {isGreaterThanMedium && <div>isGreaterThanMedium</div>}
       {isBetweenSmallAndMedium && <div>isBetweenSmallAndMedium</div>}
-      {isLessThanSmallOrGreaterThanLarge1 && <div>isLessThanSmallOrGreaterThanLarge1</div>}
-      {isLessThanSmallOrGreaterThanLarge2 && <div>isLessThanSmallOrGreaterThanLarge2</div>}
+      {isLessThanMediumOrGreaterThanLarge1 && <div>isLessThanMediumOrGreaterThanLarge1</div>}
+      {isLessThanMediumOrGreaterThanLarge2 && <div>isLessThanMediumOrGreaterThanLarge2</div>}
     </Wrapper>
   );
 };
