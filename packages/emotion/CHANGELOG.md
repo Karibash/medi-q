@@ -1,5 +1,12 @@
 # @medi-q/emotion
 
+## 0.2.0
+
+### Patch Changes
+
+- Updated dependencies [[`b1041b4`](https://github.com/Karibash/medi-q/commit/b1041b49b2f5ff8ce0fbc6a34b3d86e38f1409ca)]:
+  - @medi-q/react@0.2.0
+
 ## 0.1.0
 
 ### Patch Changes
