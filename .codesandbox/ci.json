@@ -1,0 +1,5 @@
+{
+  "packages": ["packages/*"],
+  "sandboxes": ["medi-q-emotion-example-06cjh", "medi-q-styled-example-wf2hw"],
+  "node": "12"
+}
