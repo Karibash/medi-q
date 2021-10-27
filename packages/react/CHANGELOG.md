@@ -1,5 +1,11 @@
 # @medi-q/react
 
+## 0.2.0
+
+### Minor Changes
+
+- [#4](https://github.com/Karibash/medi-q/pull/4) [`b1041b4`](https://github.com/Karibash/medi-q/commit/b1041b49b2f5ff8ce0fbc6a34b3d86e38f1409ca) Thanks [@Karibash](https://github.com/Karibash)! - Add a handler to the useMediQ hook to detect the state change
+
 ## 0.1.0
 
 ### Minor Changes
