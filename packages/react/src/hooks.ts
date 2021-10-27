@@ -13,6 +13,7 @@ export const useMediQContext = (): MediQ => {
 
 export type UseMediQOptions = {
   test?: 'some' | 'every';
+  onChange?: (event: { query: string; matches: boolean }) => void;
   matchMedia?: (query: string) => MediaQueryList | { matches: boolean };
   defaultMatches?: boolean;
 };
@@ -24,25 +25,23 @@ export const useMediQ = (
   const existsMatchMedia = typeof window !== 'undefined' && typeof window.matchMedia !== 'undefined';
   const {
     test = 'some',
+    onChange = undefined,
     matchMedia = existsMatchMedia ? window.matchMedia : undefined,
     defaultMatches = false,
   } = options;
 
   const mediQ = useMediQContext();
 
-  const [queries, setQueries] = useState(() => {
-    const inputs = Array.isArray(queryInput) ? queryInput : [queryInput];
-    return inputs.map(input => mediQ(input));
-  });
+  const inputs = Array.isArray(queryInput) ? queryInput : [queryInput];
+  const [queries, setQueries] = useState(() => inputs.map(input => mediQ(input)));
 
   useIsomorphicLayoutEffect(() => {
-    const inputs = Array.isArray(queryInput) ? queryInput : [queryInput];
     setQueries(previous => {
       const newQueries = inputs.map(input => mediQ(input));
       if (previous.length === (new Set([...previous, ...newQueries])).size) return previous;
       return newQueries;
     });
-  }, [queryInput, mediQ]);
+  }, [inputs, mediQ]);
 
   const [matches, setMatches] = useState(() => {
     if (matchMedia) return queries[test](query => matchMedia(query).matches);
@@ -52,10 +51,22 @@ export const useMediQ = (
   useIsomorphicLayoutEffect(() => {
     if (!matchMedia) return;
     const mediaQueries = queries.map(query => matchMedia(query));
-    const update = (): void => setMatches(mediaQueries[test](mediaQuery => mediaQuery.matches));
-    mediaQueries.forEach(mediaQuery => 'addListener' in mediaQuery ? mediaQuery.addListener(update) : null);
+
+    const updateHandlers = inputs.map((input, index) => () => {
+      onChange?.({ query: input, matches: mediaQueries[index].matches });
+      setMatches(mediaQueries[test](mediaQuery => mediaQuery.matches));
+    });
+
+    mediaQueries.forEach((mediaQuery, index) => {
+      if (!('addListener' in mediaQuery)) return;
+      mediaQuery.addListener(updateHandlers[index]);
+    });
+
     return () => {
-      mediaQueries.forEach(mediaQuery => 'removeListener' in mediaQuery ? mediaQuery.removeListener(update) : null);
+      mediaQueries.forEach((mediaQuery, index) => {
+        if (!('removeListener' in mediaQuery)) return;
+        mediaQuery.removeListener(updateHandlers[index]);
+      });
     };
   }, [queries, matchMedia]);
 
