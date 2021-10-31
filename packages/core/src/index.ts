@@ -7,8 +7,8 @@ export * from './types';
 
 export const createMediQ = (
   breakPoints: BreakPoints,
-  unit: LengthUnitSuffix = 'rem',
-  options?: ConvertLengthUnitArgsOptions,
+  unit: Extract<LengthUnitSuffix, 'px' | 'em' | 'rem'> = 'em',
+  options?: Pick<ConvertLengthUnitArgsOptions, 'em' | 'rem'>,
 ): MediQ => {
   const keys = Object.keys(breakPoints);
   const _breakPoints = normalizedBreakPoints(breakPoints, unit, options);
