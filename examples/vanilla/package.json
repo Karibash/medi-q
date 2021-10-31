@@ -7,7 +7,7 @@
     "postbuild": "open public/index.html"
   },
   "dependencies": {
-    "@medi-q/core": "^0.0.3"
+    "@medi-q/core": "^0.3.0"
   },
   "devDependencies": {
     "ts-loader": "^9.2.5",
