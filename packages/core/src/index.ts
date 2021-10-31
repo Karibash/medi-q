@@ -7,7 +7,7 @@ export * from './types';
 
 export const createMediQ = (
   breakPoints: BreakPoints,
-  unit: Extract<LengthUnitSuffix, 'px' | 'em' | 'rem'> = 'rem',
+  unit: Extract<LengthUnitSuffix, 'px' | 'em' | 'rem'> = 'em',
   options?: Pick<ConvertLengthUnitArgsOptions, 'em' | 'rem'>,
 ): MediQ => {
   const keys = Object.keys(breakPoints);
