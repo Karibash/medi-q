@@ -1,6 +1,6 @@
 {
   "name": "@medi-q/react",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "medi-q for react.",
   "main": "dist/medi-q-react.cjs.js",
   "module": "dist/medi-q-react.esm.js",
@@ -37,7 +37,7 @@
   "homepage": "https://github.com/Karibash/medi-q/tree/main/packages/react",
   "dependencies": {
     "@babel/runtime": "^7.15.4",
-    "@medi-q/core": "^0.0.3"
+    "@medi-q/core": "^0.3.0"
   },
   "peerDependencies": {
     "react": ">=16.8.0"

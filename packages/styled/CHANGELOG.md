@@ -1,5 +1,13 @@
 # @medi-q/styled
 
+## 0.3.0
+
+### Patch Changes
+
+- Updated dependencies [[`1334ae0`](https://github.com/Karibash/medi-q/commit/1334ae08f4a68b06ce5a7f33ec0cc12a4426e504), [`b237028`](https://github.com/Karibash/medi-q/commit/b23702862c87a2762c95d41edf709ea607d7dc05)]:
+  - @medi-q/core@0.3.0
+  - @medi-q/react@0.3.0
+
 ## 0.2.0
 
 ### Patch Changes

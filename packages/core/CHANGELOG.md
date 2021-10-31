@@ -1,5 +1,15 @@
 # @medi-q/core
 
+## 0.3.0
+
+### Minor Changes
+
+- [#10](https://github.com/Karibash/medi-q/pull/10) [`1334ae0`](https://github.com/Karibash/medi-q/commit/1334ae08f4a68b06ce5a7f33ec0cc12a4426e504) Thanks [@Karibash](https://github.com/Karibash)! - Restrict the units that can be used to px, em, and rem
+
+### Patch Changes
+
+- [#10](https://github.com/Karibash/medi-q/pull/10) [`b237028`](https://github.com/Karibash/medi-q/commit/b23702862c87a2762c95d41edf709ea607d7dc05) Thanks [@Karibash](https://github.com/Karibash)! - Make the initial value of the unit conversion to em
+
 ## 0.0.3
 
 ### Patch Changes
