@@ -17,5 +17,7 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true
-  }
+  },
+  "include": ["packages"],
+  "exclude": ["node_modules"]
 }
