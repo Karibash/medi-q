@@ -17,5 +17,11 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true
-  }
+  },
+  "files": [
+    "babel.config.js",
+    "jest.config.js"
+  ],
+  "include": ["packages"],
+  "exclude": ["node_modules"]
 }

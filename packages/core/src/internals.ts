@@ -14,8 +14,8 @@ export const normalizedBreakPoints = (
 };
 
 export const parseQueryInput = (queryInput: MediQInput, keys: string[]): string[][] => {
-  const parsedQueryInput = queryInput.split('-').reduce<string[][]>((previous, current) => {
-    if (current === 'and' || current === 'or') {
+  const parsedQueryInput = queryInput.split('-').reduce<string[][]>((previous, current, index) => {
+    if (((index + 1) % 3) === 0) {
       previous.push([current], []);
       return previous;
     }
@@ -26,11 +26,17 @@ export const parseQueryInput = (queryInput: MediQInput, keys: string[]): string[
 
   for (const args of parsedQueryInput) {
     if (2 <= args.length) {
-      if (!(args[0] === 'max' || args[0] === 'min')) throw new Error();
-      if (!keys.includes(args[1])) throw new Error();
+      if (!(args[0] === 'max' || args[0] === 'min')) {
+        throw new Error('Invalid query. Please use "max" or "min" as the query prefix.');
+      }
+      if (!keys.includes(args[1])) {
+        throw new Error(`Invalid query. Please use the values shown on the right for breakpoints: [${keys.join(',')}].`);
+      }
       continue;
     }
-    if (!(args[0] === 'and' || args[0] === 'or')) throw new Error();
+    if (!(args[0] === 'and' || args[0] === 'or')) {
+      throw new Error('Invalid query. Please use "and" or "or" for conjunctions.');
+    }
   }
 
   return parsedQueryInput;

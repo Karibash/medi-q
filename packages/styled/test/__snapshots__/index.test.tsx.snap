@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@medi-q/styled composite query 1`] = `
+.c0 {
+  color: #000000;
+}
+
+@media (min-width:25em) and (max-width:25em) {
+  .c0 {
+    background: #000001;
+  }
+}
+
+@media (min-width:37.5em) and (max-width:37.5em) {
+  .c0 {
+    background: #000002;
+  }
+}
+
+@media (min-width:50em) and (max-width:50em) {
+  .c0 {
+    background: #000003;
+  }
+}
+
+@media (min-width:62.5em) and (max-width:62.5em) {
+  .c0 {
+    background: #000004;
+  }
+}
+
+@media (max-width:25em),(min-width:25em) {
+  .c0 {
+    background: #000005;
+  }
+}
+
+@media (max-width:37.5em),(min-width:37.5em) {
+  .c0 {
+    background: #000006;
+  }
+}
+
+@media (max-width:50em),(min-width:50em) {
+  .c0 {
+    background: #000007;
+  }
+}
+
+@media (max-width:62.5em),(min-width:62.5em) {
+  .c0 {
+    background: #000008;
+  }
+}
+
+<div
+  class="c0"
+/>
+`;
+
+exports[`@medi-q/styled invalid query breakpoint 1`] = `"Invalid query. Please use the values shown on the right for breakpoints: [tiny,small,medium,large]."`;
+
+exports[`@medi-q/styled invalid query conjunctions 1`] = `"Invalid query. Please use \\"and\\" or \\"or\\" for conjunctions."`;
+
+exports[`@medi-q/styled invalid query prefix 1`] = `"Invalid query. Please use \\"max\\" or \\"min\\" as the query prefix."`;
+
+exports[`@medi-q/styled max query 1`] = `
+.c0 {
+  color: #000000;
+}
+
+@media (max-width:25em) {
+  .c0 {
+    background: #000001;
+  }
+}
+
+@media (max-width:37.5em) {
+  .c0 {
+    background: #000002;
+  }
+}
+
+@media (max-width:50em) {
+  .c0 {
+    background: #000003;
+  }
+}
+
+@media (max-width:62.5em) {
+  .c0 {
+    background: #000004;
+  }
+}
+
+<div
+  class="c0"
+/>
+`;
+
+exports[`@medi-q/styled min query 1`] = `
+.c0 {
+  color: #000000;
+}
+
+@media (min-width:25em) {
+  .c0 {
+    background: #000001;
+  }
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    background: #000002;
+  }
+}
+
+@media (min-width:50em) {
+  .c0 {
+    background: #000003;
+  }
+}
+
+@media (min-width:62.5em) {
+  .c0 {
+    background: #000004;
+  }
+}
+
+<div
+  class="c0"
+/>
+`;
