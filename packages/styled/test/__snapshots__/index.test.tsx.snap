@@ -58,6 +58,12 @@ exports[`@medi-q/styled composite query 1`] = `
 />
 `;
 
+exports[`@medi-q/styled invalid query breakpoint 1`] = `"Invalid query. Please use the values shown on the right for breakpoints: [tiny,small,medium,large]."`;
+
+exports[`@medi-q/styled invalid query conjunctions 1`] = `"Invalid query. Please use \\"and\\" or \\"or\\" for conjunctions."`;
+
+exports[`@medi-q/styled invalid query prefix 1`] = `"Invalid query. Please use \\"max\\" or \\"min\\" as the query prefix."`;
+
 exports[`@medi-q/styled max query 1`] = `
 .c0 {
   color: #000000;

@@ -21,6 +21,69 @@ const mediQ = createMediQ({
 });
 
 describe('@medi-q/styled', () => {
+  it('invalid query prefix', () => {
+    expect(() => {
+      const mock = jest.spyOn(console, 'error').mockImplementation(jest.fn());
+      const Component = styled.div`
+        ${props => {
+          // @ts-ignore
+          return props.theme.mediQ('invalid-tiny');
+        }} {
+          color: #000000;
+        }
+      `;
+
+      render(
+        <ThemeProvider theme={{}} mediQ={mediQ}>
+          <Component />
+        </ThemeProvider>,
+      );
+      expect(mock).toBeCalledTimes(1);
+    }).toThrowErrorMatchingSnapshot();
+  });
+
+  it('invalid query breakpoint', () => {
+    expect(() => {
+      const mock = jest.spyOn(console, 'error').mockImplementation(jest.fn());
+      const Component = styled.div`
+        ${props => {
+          // @ts-ignore
+          return props.theme.mediQ('min-invalid');
+        }} {
+          color: #000000;
+        }
+      `;
+
+      render(
+        <ThemeProvider theme={{}} mediQ={mediQ}>
+          <Component />
+        </ThemeProvider>,
+      );
+      expect(mock).toBeCalledTimes(1);
+    }).toThrowErrorMatchingSnapshot();
+  });
+
+  it('invalid query conjunctions', () => {
+    expect(() => {
+      const mock = jest.spyOn(console, 'error').mockImplementation(jest.fn());
+      const Component = styled.div`
+        ${props => {
+          // @ts-ignore
+          return props.theme.mediQ('min-tiny-invalid-max-small');
+        }} {
+          color: #000000;
+        }
+      `;
+
+      render(
+        <ThemeProvider theme={{}} mediQ={mediQ}>
+          <Component />
+        </ThemeProvider>,
+      );
+      expect(mock).toBeCalledTimes(1);
+    }).toThrowErrorMatchingSnapshot();
+  });
+
   it('min query', () => {
     const Component = styled.div`
       color: #000000;
