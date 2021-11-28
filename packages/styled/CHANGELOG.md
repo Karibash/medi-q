@@ -1,5 +1,15 @@
 # @medi-q/styled
 
+## 0.3.1
+
+### Patch Changes
+
+- [#15](https://github.com/Karibash/medi-q/pull/15) [`735548b`](https://github.com/Karibash/medi-q/commit/735548b0a683aa59d5a11d0817c9206bffc1937f) Thanks [@Karibash](https://github.com/Karibash)! - Fix the typo in the component name
+
+- Updated dependencies [[`16768aa`](https://github.com/Karibash/medi-q/commit/16768aa74289d8bf5ea199bca3826ba867f06649)]:
+  - @medi-q/core@0.3.1
+  - @medi-q/react@0.3.1
+
 ## 0.3.0
 
 ### Patch Changes
