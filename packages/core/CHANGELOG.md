@@ -1,5 +1,11 @@
 # @medi-q/core
 
+## 0.3.1
+
+### Patch Changes
+
+- [#12](https://github.com/Karibash/medi-q/pull/12) [`16768aa`](https://github.com/Karibash/medi-q/commit/16768aa74289d8bf5ea199bca3826ba867f06649) Thanks [@Karibash](https://github.com/Karibash)! - Make the error message clearer when an invalid query is used
+
 ## 0.3.0
 
 ### Minor Changes
