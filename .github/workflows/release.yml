@@ -11,23 +11,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@master
+        uses: actions/setup-node@v2
         with:
-          node-version: 14
+          node-version: 16
 
-      - name: Install Yarn
-        run: npm install --global yarn
-
-      - name: Install Dependencies
+      - name: Install dependencies
         run: yarn --frozen-lockfile
 
-      - name: Create Release Pull Request or Publish to npm
-        uses: changesets/action@master
+      - name: Create release pull request or publish to npm
+        uses: changesets/action@v1
         with:
           publish: yarn release
         env:

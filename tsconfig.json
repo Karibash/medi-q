@@ -20,7 +20,8 @@
   },
   "files": [
     "babel.config.js",
-    "jest.config.js"
+    "jest.config.js",
+    "jest.dist.js"
   ],
   "include": ["packages"],
   "exclude": ["node_modules"]

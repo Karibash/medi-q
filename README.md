@@ -1,6 +1,7 @@
 # medi-q
 
 [![npm version](https://badge.fury.io/js/@medi-q%2Fcore.svg)](https://badge.fury.io/js/@medi-q%2Fcore)
+[![codecov](https://codecov.io/gh/Karibash/medi-q/branch/main/graph/badge.svg)](https://codecov.io/gh/Karibash/medi-q)
 ![@medi-q/core size](https://img.shields.io/bundlephobia/min/@medi-q/core.svg?label=@medi-q/core%20size)
 ![@medi-q/core gzip size](https://img.shields.io/bundlephobia/minzip/@medi-q/core.svg?label=@medi-q/core%20gzip%20size)
 ![@medi-q/react size](https://img.shields.io/bundlephobia/min/@medi-q/react.svg?label=@medi-q/react%20size)
