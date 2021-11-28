@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { MediQ, MediQInput } from '@medi-q/core';
 import { MediQProvider } from '@medi-q/react';
-import { ThemeProvider as EmotionThemeProvider, DefaultTheme } from 'styled-components';
+import { ThemeProvider as StyledComponentsThemeProvider, DefaultTheme } from 'styled-components';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
@@ -22,9 +22,9 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
 }) => {
   return (
     <MediQProvider mediQ={mediQ}>
-      <EmotionThemeProvider theme={{ ...theme, mediQ: (input: MediQInput) => `@media ${mediQ(input)}` }}>
+      <StyledComponentsThemeProvider theme={{ ...theme, mediQ: (input: MediQInput) => `@media ${mediQ(input)}` }}>
         {children}
-      </EmotionThemeProvider>
+      </StyledComponentsThemeProvider>
     </MediQProvider>
   );
 };
