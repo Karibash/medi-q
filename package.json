@@ -10,6 +10,7 @@
     "breakpoint"
   ],
   "scripts": {
+    "postinstall": "preconstruct dev",
     "prepare": "simple-git-hooks",
     "build:watch": "preconstruct watch",
     "build": "preconstruct build",
