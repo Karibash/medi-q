@@ -17,6 +17,7 @@
     "lint:check": "eslint .",
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:dist": "yarn build && jest -c jest.dist.js --no-cache --ci --runInBand",
     "test:coverage": "jest --coverage --no-cache --ci --runInBand",
     "changeset": "changeset",
     "version-apply": "changeset version",
